@@ -95,6 +95,9 @@ export default {
       if (this.isExternalLink(routePath)) {
         return routePath
       }
+      if (routePath == "sentiment/:owner([A-Za-z0-9_-]+)/:project([A-Za-z0-9_-]+)") {
+        return path.resolve(this.basePath, "sentiment/vim/vim")
+      }
       return path.resolve(this.basePath, routePath)
     },
     isExternalLink(routePath) {

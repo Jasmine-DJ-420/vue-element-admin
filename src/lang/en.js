@@ -1,5 +1,13 @@
 export default {
   route: {
+    sentiment: 'Sentiment',
+    developer: 'Developer',
+    dataset: 'Data Set',
+    download: 'Download',
+    display: 'Display',
+    onlineTools: 'Online Tools',
+    sentimentAnalysis: 'Sentiment Analysis',
+    others: 'Others',
     dashboard: 'Dashboard',
     introduction: 'Introduction',
     documentation: 'Documentation',
@@ -87,8 +95,7 @@ export default {
   },
   permission: {
     roles: 'Your roles',
-    switchRoles: 'Switch roles',
-    tips: 'In some cases it is not suitable to use v-permission, such as element Tab component or el-table-column and other asynchronous rendering dom cases which can only be achieved by manually setting the v-if.'
+    switchRoles: 'Switch roles'
   },
   guide: {
     description: 'The guide page is useful for some people who entered the project for the first time. You can briefly introduce the features of the project. Demo is based on ',
@@ -143,9 +150,6 @@ export default {
     export: 'Export',
     placeholder: 'Please enter the file name(default file)'
   },
-  pdf: {
-    tips: 'Here we use window.print() to implement the feature of downloading pdf.'
-  },
   theme: {
     change: 'Change Theme',
     documentation: 'Theme documentation',
@@ -156,5 +160,14 @@ export default {
     close: 'Close',
     closeOthers: 'Close Others',
     closeAll: 'Close All'
+  },
+
+  sentiment: {
+    placeholder: 'Please enter the project name',
+    placeholderowner: 'Please enter the name of the project owner',
+    placeholderdeveloper: 'Please enter the name of the developer',
+    search: 'Search',
+    searchdeveloper: 'Search Developer',
+    analysis: 'Analyze'
   }
 }

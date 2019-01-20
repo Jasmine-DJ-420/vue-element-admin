@@ -60,7 +60,7 @@ export default {
       margin-right: 5px;
     }
     .wx-svg-container {
-      background-color: #24da70;
+      background-color: #8ada53;
     }
     .qq-svg-container {
       background-color: #6BA2D6;

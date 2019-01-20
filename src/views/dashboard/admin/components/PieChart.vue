@@ -51,7 +51,9 @@ export default {
       this.chart.setOption({
         tooltip: {
           trigger: 'item',
-          formatter: '{a} <br/>{b} : {c} ({d}%)'
+          formatter: '{a} <br/>{b} : {c} ({d}%)',
+          position: 'right',
+          confine: false
         },
         legend: {
           left: 'center',

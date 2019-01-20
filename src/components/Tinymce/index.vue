@@ -1,9 +1,9 @@
 <template>
   <div :class="{fullscreen:fullscreen}" class="tinymce-container editor-container">
     <textarea :id="tinymceId" class="tinymce-textarea"/>
-    <div class="editor-custom-btn-container">
-      <editorImage color="#1890ff" class="editor-upload-btn" @successCBK="imageSuccessCBK"/>
-    </div>
+  <!--<div class="editor-custom-btn-container">-->
+    <!--<editorImage color="#1890ff" class="editor-upload-btn" @successCBK="imageSuccessCBK"/>-->
+  <!--</div>-->
   </div>
 </template>
 
@@ -157,13 +157,8 @@ export default {
       })
     },
     destroyTinymce() {
-      const tinymce = window.tinymce.get(this.tinymceId)
-      if (this.fullscreen) {
-        tinymce.execCommand('mceFullScreen')
-      }
-
-      if (tinymce) {
-        tinymce.destroy()
+      if (window.tinymce.get(this.tinymceId)) {
+        window.tinymce.get(this.tinymceId).destroy()
       }
     },
     setContent(value) {
@@ -185,7 +180,6 @@ export default {
 <style scoped>
 .tinymce-container {
   position: relative;
-  line-height: normal;
 }
 .tinymce-container>>>.mce-fullscreen {
   z-index: 10000;

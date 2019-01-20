@@ -39,21 +39,19 @@
 
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">{{ $t('login.logIn') }}</el-button>
 
-      <div style="position:relative">
-        <div class="tips">
-          <span>{{ $t('login.username') }} : admin</span>
-          <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>
-        </div>
-        <div class="tips">
-          <span style="margin-right:18px;">{{ $t('login.username') }} : editor</span>
-          <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>
-        </div>
-
-        <el-button class="thirdparty-button" type="primary" @click="showDialog=true">{{ $t('login.thirdparty') }}</el-button>
+      <div class="tips">
+        <span>{{ $t('login.username') }} : admin</span>
+        <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>
       </div>
+      <div class="tips">
+        <span style="margin-right:18px;">{{ $t('login.username') }} : editor</span>
+        <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>
+      </div>
+
+      <el-button class="thirdparty-button" type="primary" @click="showDialog=true">{{ $t('login.thirdparty') }}</el-button>
     </el-form>
 
-    <el-dialog :title="$t('login.thirdparty')" :visible.sync="showDialog">
+    <el-dialog :title="$t('login.thirdparty')" :visible.sync="showDialog" append-to-body>
       {{ $t('login.thirdpartyTips') }}
       <br>
       <br>
@@ -109,6 +107,7 @@ export default {
       },
       immediate: true
     }
+
   },
   created() {
     // window.addEventListener('hashchange', this.afterQRScan)
@@ -215,17 +214,18 @@ $dark_gray:#889aa4;
 $light_gray:#eee;
 
 .login-container {
-  min-height: 100%;
+  position: fixed;
+  height: 100%;
   width: 100%;
   background-color: $bg;
-  overflow: hidden;
   .login-form {
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
     width: 520px;
     max-width: 100%;
-    padding: 160px 35px 0;
-    margin: 0 auto;
-    overflow: hidden;
+    padding: 35px 35px 15px 35px;
+    margin: 120px auto;
   }
   .tips {
     font-size: 14px;
@@ -271,8 +271,8 @@ $light_gray:#eee;
   }
   .thirdparty-button {
     position: absolute;
-    right: 0;
-    bottom: 6px;
+    right: 35px;
+    bottom: 28px;
   }
 }
 </style>

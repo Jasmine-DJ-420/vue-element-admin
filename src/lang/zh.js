@@ -1,5 +1,13 @@
 export default {
   route: {
+    sentiment: '情感',
+    developer: '开发者视图',
+    download: '数据下载',
+    dataset: '数据集',
+    display: '数据展示',
+    onlineTools: '在线工具',
+    sentimentAnalysis: '情感分析',
+    others: '其它工具',
     dashboard: '首页',
     introduction: '简述',
     documentation: '文档',
@@ -87,8 +95,7 @@ export default {
   },
   permission: {
     roles: '你的权限',
-    switchRoles: '切换权限',
-    tips: '在某些情况下，不适合使用 v-permission。例如：Element-UI 的 Tab 组件或 el-table-column 以及其它动态渲染 dom 的场景。你只能通过手动设置 v-if 来实现。'
+    switchRoles: '切换权限'
   },
   guide: {
     description: '引导页对于一些第一次进入项目的人很有用，你可以简单介绍下项目的功能。本 Demo 是基于',
@@ -143,9 +150,6 @@ export default {
     export: '导出',
     placeholder: '请输入文件名(默认file)'
   },
-  pdf: {
-    tips: '这里使用   window.print() 来实现下载pdf的功能'
-  },
   theme: {
     change: '换肤',
     documentation: '换肤文档',
@@ -156,5 +160,14 @@ export default {
     close: '关闭',
     closeOthers: '关闭其它',
     closeAll: '关闭所有'
+  },
+
+  sentiment: {
+    placeholder: '请输入项目名称',
+    placeholderowner: '请输入项目拥有者名称',
+    placeholderdeveloper: '请输入开发者名称',
+    search: '搜索',
+    searchdeveloper: '搜索开发者',
+    analysis: '情感分析'
   }
 }
